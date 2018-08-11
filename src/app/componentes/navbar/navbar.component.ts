@@ -13,8 +13,8 @@ export class NavbarComponent implements OnInit {
   public fotoUsuario: string;
   constructor(
     public authService: AuthService
- 
   ) { }
+
 
   ngOnInit() {
     this.authService.getAuth().subscribe(auth => {

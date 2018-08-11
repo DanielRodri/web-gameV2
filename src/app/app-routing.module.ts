@@ -6,13 +6,17 @@ import {RegisterPageComponent} from './componentes/register-page/register-page.c
 import {PrivadoPageComponent} from './componentes/privado-page/privado-page.component';
 import {NotFoundPageComponent} from './componentes/not-found-page/not-found-page.component';
 
+
 import {AuthGuard} from './guards/auth.guard';
+import { GameComponent } from './componentes/MainGame/game/game.component';
+
 const routes: Routes = [
   {path: '',component: HomePageComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
   {path: 'privado', component: PrivadoPageComponent, canActivate:[AuthGuard] },
-  {path: '**', component: NotFoundPageComponent}
+  {path: 'game', component: GameComponent},
+  {path: '**', component: NotFoundPageComponent},
 ];
 
 @NgModule({
