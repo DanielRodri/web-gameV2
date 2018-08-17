@@ -28,6 +28,7 @@ import {AuthGuard} from './guards/auth.guard';
 import { BoardComponent } from './componentes/MainGame/board/board.component';
 import { PieceComponent } from './componentes/MainGame/piece/piece.component';
 import { GameComponent } from './componentes/MainGame/game/game.component';
+import { RoomsComponent } from './componentes/rooms/rooms.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { GameComponent } from './componentes/MainGame/game/game.component';
     BoardComponent,
     PieceComponent,
     GameComponent,
+    RoomsComponent,
 
   ],
   imports: [

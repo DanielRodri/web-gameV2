@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+declare var require: any;
+var data = require('../../../../Data.json');
 
 @Component({
   selector: 'app-game',
@@ -10,7 +12,7 @@ export class GameComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.matrix = [[null,"A","aA",4,5],["b",["B",2,null],"bB",6,7],["c",{c:2},"cC",6,5],[1,2,3,4,5],[1,2,3,4,5]];
+    this.matrix = data.matrix;
   }
   getMatrixSize(){
     return this.matrix.length;

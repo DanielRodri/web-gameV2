@@ -17,6 +17,6 @@ export class BoardComponent implements OnInit {
   }
   piecePosition(i,j){
       console.log("hola: "+j,i)
-      this.board[i][j]="a";
+      this.board[i][j]=1;
   }
 }
