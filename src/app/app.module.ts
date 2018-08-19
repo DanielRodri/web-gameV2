@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -53,6 +55,7 @@ import { RoomsComponent } from './componentes/rooms/rooms.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FlashMessagesModule,
     AngularFirestoreModule,
+    HttpModule,
   ],
   providers: [AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]

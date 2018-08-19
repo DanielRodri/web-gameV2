@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-declare var require: any;
-var data = require('../../../../Data.json');
+import { RulesService } from '../rules.service'
+
+//var data = require('../../../../Data.json');
 
 @Component({
   selector: 'app-game',
@@ -9,10 +10,12 @@ var data = require('../../../../Data.json');
 })
 export class GameComponent implements OnInit {
   private matrix:Array<any>
-  constructor() { }
+  constructor(private rulesService: RulesService) { }
 
   ngOnInit() {
-    this.matrix = data.matrix;
+    this.rulesService.getMatrix().subscribe(res=>{
+      this.matrix=res.json() as Array<any>;
+    });
   }
   getMatrixSize(){
     return this.matrix.length;
