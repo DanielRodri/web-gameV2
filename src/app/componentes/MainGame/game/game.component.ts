@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RulesService } from '../rules.service'
+import { RulesService } from '../../../servicios/rules/rules.service'
 
 //var data = require('../../../../Data.json');
 

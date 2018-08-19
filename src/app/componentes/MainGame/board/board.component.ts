@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { PieceComponent } from '../piece/piece.component';
-import { RulesService } from '../rules.service'
+import { RulesService } from '../../../servicios/rules/rules.service'
 
 @Component({
   selector: 'app-board',
