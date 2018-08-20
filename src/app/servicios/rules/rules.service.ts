@@ -18,6 +18,9 @@ export class RulesService {
   getMatrix(){
     return this.http.get('http://localhost:3000'+this.API_URL);
   }
+  createMatrix(size: any){
+    return this.http.post('http://localhost:3000'+this.API_URL,size);
+  }
   /*private handleError (error: any) {
     let errMsg = (error.message) ? error.message :
     error.status ? `${error.status} - ${error.statusText}` : 'Server error';

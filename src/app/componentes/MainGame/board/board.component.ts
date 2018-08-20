@@ -17,11 +17,9 @@ export class BoardComponent implements OnInit {
     
   }
   piecePosition(i,j){
-      //console.log("hola: "+j,i)
-      this.board[i][j]=1;
-      let posiciones = {posX:i,posY:j}
+      let posiciones = {matrix:this.board,posX:i,posY:j}
       this.rulesService.tryMove(posiciones).subscribe(res=>{
-        console.log(res);
+        this.board=res.json() as Array<any>;
       })
   }
 }
