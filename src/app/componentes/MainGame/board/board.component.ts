@@ -14,7 +14,7 @@ export class BoardComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    
+    //alert("game started");
   }
   piecePosition(i,j){
       let posiciones = {matrix:this.board,posX:i,posY:j}

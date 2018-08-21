@@ -16,10 +16,13 @@ export class RulesService {
     return this.http.put('http://localhost:3000'+this.API_URL+'/rules'+'/'+posicion.posX+'/'+posicion.posY, posicion);
   }
   getMatrix(){
-    return this.http.get('http://localhost:3000'+this.API_URL);
+    return this.http.get('http://localhost:3000'+this.API_URL+'/getMatrix');
+  }
+  getPlayers(){
+    return this.http.get('http://localhost:3000'+this.API_URL+'/getPlayers');
   }
   createMatrix(size: any){
-    return this.http.post('http://localhost:3000'+this.API_URL,size);
+    return this.http.post('http://localhost:3000'+this.API_URL+'/createMatrix',size);
   }
   /*private handleError (error: any) {
     let errMsg = (error.message) ? error.message :
