@@ -31,6 +31,7 @@ import { BoardComponent } from './componentes/MainGame/board/board.component';
 import { PieceComponent } from './componentes/MainGame/piece/piece.component';
 import { GameComponent } from './componentes/MainGame/game/game.component';
 import { RoomsComponent } from './componentes/rooms/rooms.component';
+import { ConfigComponent } from './componentes/config/config.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { RoomsComponent } from './componentes/rooms/rooms.component';
     PieceComponent,
     GameComponent,
     RoomsComponent,
+    ConfigComponent,
 
   ],
   imports: [

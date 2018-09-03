@@ -1,7 +1,7 @@
-<app-board style="display:flex;width:getMatrixSize()*50;flex-wrap:wrap" [board]="matrix"></app-board>
-<div>
+<app-board *ngIf="matrix!==undefined" [ngStyle]="this.boardStyle" [board]="matrix" [pieceStyles]="pieceStyles" [disabled]="false"></app-board>
+<div *ngIf="disabled===false">
     <p *ngIf="player1!==undefined">Player1: {{player1.name}}</p>
 </div>
-<div>
+<div *ngIf="disabled===false">
     <p *ngIf="player2!==undefined">Player2: {{player2.name}}</p>
 </div>

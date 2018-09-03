@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center">Configuracion del Tablero</h1>
+          <form (submit)="configBoard()">
+          <div style="display: flex; flex-direction: row;">
+              <div>
+                  <app-board [ngStyle]="boardStyle" [board]="matrixView" [pieceStyles]="pieceStyles" [disabled]="true"></app-board>
+              </div>
+              <div>
+                <label for="pf">Fondo</label>
+                <input type="pf" name="pf" id="pf" [(ngModel)]="image" class="form-control">
+                <label for="pc">Color</label>
+                <input type="pc" name="pc" id="pc" [(ngModel)]="color" class="form-control">
+                <label for="bc">Color Borde</label>
+                <input type="bc" name="bc" id="bc" [(ngModel)]="bColor" class="form-control">
+              </div>
+          </div>
+          <input type="submit" value="ENVIAR" class="btn btn-primary btn-block btn-lg">
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  

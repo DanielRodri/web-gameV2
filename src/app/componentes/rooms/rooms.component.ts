@@ -14,6 +14,7 @@ export class RoomsComponent implements OnInit {
   private player1={name:""}
   private player2={name:""}
   private size = 6;
+  private matrixView= [[null,null,null,null],[null,1,2,null],[null,2,1,null],[null,null,null,null]];
   ngOnInit() {
   }
   goRoom(){
@@ -30,6 +31,18 @@ export class RoomsComponent implements OnInit {
   }
   putSize(size){
     this.size=size
+  }
+  getStyle(){
+    let pixels = (4*50).toString();
+    let a = 'display:flex;'+
+            //'background:green;'+
+            'background-size:' +pixels+'px '+pixels+'px;'+
+            'flex-wrap:wrap;'+
+            'width:'+pixels+'px;'+
+            'height:'+pixels+'px;'+
+            'background-image:'+'url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rotating_earth_%28large%29.gif/200px-Rotating_earth_%28large%29.gif)'
+    //console.log("try")
+    return a
   }
 
 }

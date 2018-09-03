@@ -12,7 +12,7 @@ export class RulesService {
   constructor(private http: Http) {
     
    }
-   tryMove(posicion: any) {
+  tryMove(posicion: any) {
     return this.http.put('http://localhost:3000'+this.API_URL+'/rules'+'/'+posicion.posX+'/'+posicion.posY, posicion);
   }
   getMatrix(){
@@ -21,8 +21,17 @@ export class RulesService {
   getPlayers(){
     return this.http.get('http://localhost:3000'+this.API_URL+'/getPlayers');
   }
+  getBoardStyle(){
+    return this.http.get('http://localhost:3000'+this.API_URL+'/getBoardStyle');
+  }
+  getPieceStyle(){
+    return this.http.get('http://localhost:3000'+this.API_URL+'/getPieceStyle');
+  }
   createMatrix(size: any){
     return this.http.post('http://localhost:3000'+this.API_URL+'/createMatrix',size);
+  }
+  configBoard(style: any) {
+    return this.http.put('http://localhost:3000'+this.API_URL+'/config/board', style);
   }
   /*private handleError (error: any) {
     let errMsg = (error.message) ? error.message :

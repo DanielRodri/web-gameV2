@@ -23,7 +23,8 @@ export class RegisterPageComponent implements OnInit {
     this.authService.registerUser(this.email, this.password)
     .then((res) =>  {
       this.flashMensaje.show('Usuario creado correctamente',{cssClass: 'alert-success', timeout: 4000});
-      this.router.navigate(['/privado']);
+      this.router.navigate(['/config']);
+      this.router.navigate(['/private']);
       
     }).catch( (err) => {
       this.flashMensaje.show(err.message,

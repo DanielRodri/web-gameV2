@@ -10,6 +10,8 @@ import {NotFoundPageComponent} from './componentes/not-found-page/not-found-page
 import {AuthGuard} from './guards/auth.guard';
 import { GameComponent } from './componentes/MainGame/game/game.component';
 import { RoomsComponent } from './componentes/rooms/rooms.component';
+import { ConfigComponent } from './componentes/config/config.component';
+
 
 
 const routes: Routes = [
@@ -19,6 +21,7 @@ const routes: Routes = [
   {path: 'privado', component: PrivadoPageComponent, canActivate:[AuthGuard] },
   {path: 'game', component: GameComponent},
   {path: 'rooms', component: RoomsComponent},
+  {path: 'config', component: ConfigComponent},
   {path: '**', component: NotFoundPageComponent},
 ];
 

@@ -13,20 +13,21 @@
           <input type="p2" name="p2" id="p2" [(ngModel)]="player2.name" class="form-control">
         </div>
         <div class="dropdown">
-          <p>Elija el tamaño de la matriz</p>
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{size}}
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" (click)="putSize(6)">6</a>
-              <a class="dropdown-item" (click)="putSize(8)">8</a>
-              <a class="dropdown-item" (click)="putSize(10)">10</a>
-            </div>
-        </div>
+                <p>Elija el tamaño de la matriz</p>
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{size}}
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" (click)="putSize(6)">6</a>
+                    <a class="dropdown-item" (click)="putSize(8)">8</a>
+                    <a class="dropdown-item" (click)="putSize(10)">10</a>
+                  </div>
+              </div>
         <input type="submit" value="ENVIAR" class="btn btn-primary btn-block btn-lg">
       </form>
       </div>
     </div>
   </div>
 </div>
+
 
